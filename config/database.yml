@@ -1,9 +1,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: magniton_db
-  username: apax_pl
-  password: launch_it_pass
+  database: mg_prel
+  username: ENV["DATABASE_USERNAME"],
+  password: ENV["DATABASE_PASSWORD"],
   pool: 5
 
 test: # this has to be different
@@ -14,10 +14,10 @@ test: # this has to be different
 production:
   adapter: postgresql
   encoding: unicode
-  database: magniton_db
+  database: mg_prel
   pool: 5
-  username: apax_pl
-  password: launch_it_pass
+  username: ENV["DATABASE_USERNAME"],
+  password: ENV["DATABASE_PASSWORD"],
 
 # production:
 #   <<: *default
